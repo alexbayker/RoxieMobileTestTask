@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/downloading_layout"
+    android:background="@color/white"
+    android:layout_gravity="bottom">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subdownloading_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        tools:ignore="UselessParent">
+
+        <ProgressBar
+            android:id="@+id/downloading_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/default_padding"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+            android:indeterminateTintMode="src_atop" />
+
+        <TextView
+            android:id="@+id/downloading_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_padding"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/downloading_bar"
+            android:background="@color/color_transparent"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/default_padding"
+            android:scrollbars="none"
+            android:scrollHorizontally="false"
+            android:singleLine="true"
+            android:text="@string/loading"
+            android:textColor="@color/black"
+            android:textSize="@dimen/titles_text_size" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

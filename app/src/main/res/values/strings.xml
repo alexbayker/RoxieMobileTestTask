@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">RoxieMobileTestTask</string>
+    <string name="loading">Loading…</string>
+    <string name="vehicle_icon_desc">Car image</string>
+    <string name="last_update_prefix">Last update at </string>
+    <string name="orders_not_loaded">Orders not loaded yet</string>
+
+    <string name="order_from_desc">From: </string>
+    <string name="order_to_desc">To: </string>
+    <string name="order_cost_desc">Cost: </string>
+
+    <string name="vehicle_info_title">Driver info</string>
+    <string name="driver_name_desc">Driver name: </string>
+    <string name="vehicle_model_desc">Model: </string>
+    <string name="vehicle_number_desc">Car number: </string>
+</resources>

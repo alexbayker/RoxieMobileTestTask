@@ -1,0 +1,90 @@
+[
+    {
+        "id": 465,
+        "startAddress": {
+            "city": "Санкт-Петербург",
+            "address": "Пр. Ленина, д. 1"
+        },
+        "endAddress": {
+            "city": "Санкт-Петербург",
+            "address": "Пр. Невский, д. 126"
+        },
+        "price": {
+            "amount": 45000,
+            "currency": "RUB"
+        },
+        "orderTime": "2015-08-27T16:36:56+03:00",
+        "vehicle": {
+            "regNumber": "х555мт98",
+            "modelName": "Nissan Almera",
+            "photo": "01.jpg",
+            "driverName": "Иванов Иван Иванович"
+        }
+    },
+    {
+        "id": 4869,
+        "startAddress": {
+            "city": "Санкт-Петербург",
+            "address": "Пр. Кантемировская, д. 28"
+        },
+        "endAddress": {
+            "city": "Санкт-Петербург",
+            "address": "Пр. Стечек, д. 50"
+        },
+        "price": {
+            "amount": 73100,
+            "currency": "RUB"
+        },
+        "orderTime": "2016-05-27T19:50:00+03:00",
+        "vehicle": {
+            "regNumber": "к345тт25",
+            "modelName": "Toyota Camry",
+            "photo": "02.jpg",
+            "driverName": "Петров Петр Петрович"
+        }
+    },
+    {
+        "id": 3684,
+        "startAddress": {
+            "city": "Санкт-Петербург",
+            "address": "Ул. Зайцева, д. 45"
+        },
+        "endAddress": {
+            "city": "Санкт-Петербург",
+            "address": "Ул. Руднева, д. 3"
+        },
+        "price": {
+            "amount": 84000,
+            "currency": "RUB"
+        },
+        "orderTime": "2016-02-01T14:11:35+03:00",
+        "vehicle": {
+            "regNumber": "н846пп98",
+            "modelName": "Лада Калина",
+            "photo": "03.jpg",
+            "driverName": "Сидоров Сидор Сидорович"
+        }
+    },
+    {
+        "id": 5555,
+        "startAddress": {
+            "city": "Санкт-Петербург",
+            "address": "Ул. Савушкина, д. 1"
+        },
+        "endAddress": {
+            "city": "Санкт-Петербург",
+            "address": "Ул. Нерчинаская, д. 6"
+        },
+        "price": {
+            "amount": 77000,
+            "currency": "RUB"
+        },
+        "orderTime": "2015-07-03T08:13:25+03:00",
+        "vehicle": {
+            "regNumber": "х555мт25",
+            "modelName": "Nissan Almera",
+            "photo": "01.jpg",
+            "driverName": "Иванов Иван Иванович"
+        }
+    }
+]

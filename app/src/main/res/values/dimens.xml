@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="icon_size">280dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="half_padding">8dp</dimen>
+    <dimen name="titles_text_size">25sp</dimen>
+    <dimen name="address_text_size">19sp</dimen>
+    <dimen name="small_text_size">15sp</dimen>
+</resources>

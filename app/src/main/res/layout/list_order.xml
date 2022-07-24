@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="order"
+            type="com.example.roxiemobiletesttask.models.Order" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/parent_layout"
+        android:padding="@dimen/default_padding"
+        android:background="@color/color_transparent_white"
+        android:onClick="@{(view) -> order.openOrderActivity(view, order)}">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_title"
+            android:text="@{`Order #` + order.id}"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_address_desc"
+            android:text="@string/order_from_desc"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/default_padding"
+            android:layout_below="@id/order_title"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_address"
+            android:text="@{order.startAddress.city + `, ` + order.startAddress.address}"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/default_padding"
+            android:layout_below="@id/start_address_desc"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/end_address_desc"
+            android:text="@string/order_to_desc"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/half_padding"
+            android:layout_below="@id/start_address"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/end_address"
+            android:text="@{order.endAddress.city + `, ` + order.endAddress.address}"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/half_padding"
+            android:layout_below="@id/end_address_desc"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_cost_desc"
+            android:text="@string/order_cost_desc"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/half_padding"
+            android:layout_below="@id/end_address"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_cost"
+            android:text="@{order.price.costString}"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/half_padding"
+            android:layout_below="@id/end_address"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_date"
+            android:text="@{order.dateString}"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginTop="@dimen/half_padding"
+            android:layout_below="@id/order_cost"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</layout>

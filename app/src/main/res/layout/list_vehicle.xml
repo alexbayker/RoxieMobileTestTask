@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vehicle"
+            type="com.example.roxiemobiletesttask.models.Vehicle" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/parent_layout"
+        android:padding="@dimen/default_padding"
+        android:background="@color/color_transparent_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicle_info_title"
+            android:text="@string/vehicle_info_title"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/icon_layout"
+            android:layout_marginTop="@dimen/default_padding"
+            android:layout_below="@id/vehicle_info_title"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vehicle_icon"
+                android:scaleType="centerInside"
+                android:visibility="gone"
+                android:src="@{vehicle}"
+                android:contentDescription="@string/vehicle_icon_desc"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:progressbar="@{loadingbar}"/>
+
+            <ProgressBar
+                android:id="@+id/loadingbar"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:indeterminate="true"
+                android:visibility="visible"
+                android:indeterminateDrawable="@drawable/progress_bar_drawable"
+                android:indeterminateTint="@color/black"
+                android:indeterminateTintMode="src_atop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/driver_name_desc"
+            android:text="@string/driver_name_desc"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/default_padding"
+            android:layout_below="@id/icon_layout"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/driver_name"
+            android:text="@{vehicle.driverName}"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/default_padding"
+            android:layout_below="@id/icon_layout"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicle_model_desc"
+            android:text="@string/vehicle_model_desc"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/half_padding"
+            android:layout_below="@id/driver_name_desc"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicle_model"
+            android:text="@{vehicle.modelName}"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/half_padding"
+            android:layout_below="@id/driver_name"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicle_number_desc"
+            android:text="@string/vehicle_number_desc"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/half_padding"
+            android:layout_below="@id/vehicle_model_desc"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicle_number"
+            android:text="@{vehicle.visibleRegNumber}"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:textSize="@dimen/address_text_size"
+            android:layout_marginTop="@dimen/half_padding"
+            android:layout_below="@id/vehicle_model"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</layout>
